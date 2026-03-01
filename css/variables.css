@@ -1,0 +1,16 @@
+:root {
+    /* Sizes */
+    --mobile-nav-height: 86.23px;
+
+    /* Colors */
+    --background-color: rgb(240, 240, 240);
+    --accent-color: 32, 140, 192;
+    --accent-color2: 106, 78, 64;
+    --text-color: #111111;
+
+    /* Font */
+    --primary-font: 'Inter', sans-serif;
+
+    /* Spacing */
+    --page-x-deadzone: 25px;
+}

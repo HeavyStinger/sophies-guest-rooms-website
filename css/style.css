@@ -1,0 +1,51 @@
+/* Libraries */
+@import url(../vendor/corbzhamburger/hamburger.css);
+
+@import url(./reset.css);
+@import url(./variables.css);
+@import url(./base.css);
+
+.hero {
+    height: calc(100vh - var(--mobile-nav-height));
+    width: 100vw;
+    /* margin-top: 2px; */
+    background-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.2)),
+        url('../media/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero > .content {
+    width: 100%;
+    padding: 0 var(--page-x-deadzone);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    color: white;
+}
+
+.hero > .content > h2 {
+    text-align: center;
+    font-weight: normal;
+}
+
+.hero > .content > p {
+    opacity: 0.8;
+    text-align: center;
+}
+
+.hero > .content > a {
+    margin-top: 20px;
+    border: 1px solid rgb(var(--accent-color2));
+}
+
+.hero > .content > a:hover {
+    color: white;
+}

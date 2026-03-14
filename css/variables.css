@@ -3,7 +3,8 @@
     --mobile-nav-height: 86.23px;
 
     /* Colors */
-    --background-color: rgb(240, 240, 240);
+    --background-color: rgb(240, 241, 246);
+    --foreground-color: 252, 252, 252;
     --accent-color: 32, 140, 192;
     --accent-color2: 106, 78, 64;
     --text-color: #111111;

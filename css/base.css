@@ -188,12 +188,165 @@ nav > .hamburger-wrapper {
 /* Footer */
 
 footer {
+    background-color: rgb(var(--accent-color2));
     margin-top: var(--page-y-spacing);
+    color: white;
 }
+
+footer > .content {
+    width: 100%;
+    padding: calc(var(--section-y-spacing) * 2) var(--page-x-deadzone);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+footer > .content > .left {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+footer > .content > .left > .socials {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+footer > .content > .left > .socials > .social {
+    /* height: 25px;
+    width: 25px; */
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+footer > .content > .left > .socials > .social:hover {
+    border-color: rgb(var(--accent-color));
+}
+
+footer > .content > .left > .socials > .social:hover > svg {
+    fill: rgb(var(--accent-color));
+}
+
+footer > .content > .left > .socials > .social > svg {
+    height: 25px;
+    width: 25px;
+    fill: white;
+}
+
+footer > .content > .left > .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer > .content > .left > .contact > * {
+    font-size: 1.1rem;
+    color: white;
+}
+
+footer > .content > .left > .contact > a {
+    width: fit-content;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+footer > .content > .left > .contact > a::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: rgb(var(--accent-color));
+    margin-top: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+}
+
+footer > .content > .right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+footer > .content > .right > .title {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+footer > .content > .right > .links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+footer > .content > .right > .links > li > a {
+    position: relative;
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer > .content > .right > .links > li > a:hover {
+    color: rgb(var(--accent-color));
+}
+
+footer > .content > .right > .links > li > a.active::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    margin-top: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(var(--accent-color));
+    border-radius: 5px;
+}
+
+footer > .cta-container {
+    width: calc(100% - (2 * var(--page-x-deadzone)));
+    margin: 0 var(--page-x-deadzone);
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+footer > .cta-container::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: rgb(var(--accent-color));
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+footer > .cta-container > .cta-button {
+    background-color: rgb(var(--accent-color));
+    font-size: 0.9rem;
+    padding: 10px 17px;
+    z-index: 2;
+}
+
+/* Designer section of footer */
 
 footer > .designer {
     width: 100%;
     background-color: rgba(var(--accent-color));
+    margin-top: calc(var(--section-y-spacing) * 2);
     padding: 10px;
     display: flex;
     justify-content: center;

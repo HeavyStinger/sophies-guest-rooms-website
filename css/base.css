@@ -38,6 +38,19 @@ body {
     color: rgb(var(--accent-color2));
 }
 
+.cta-button.secondary {
+    background-color: rgb(var(--accent-color2), 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.cta-button.secondary:hover {
+    background-color: rgb(var(--accent-color2));
+    letter-spacing: 1px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
 nav {
     width: 100%;
     background-color: white;
@@ -51,7 +64,7 @@ nav {
 }
 
 nav > .logo > img {
-    width: 170px;
+    height: 75px;
 }
 
 nav > .links {
@@ -150,4 +163,52 @@ nav > .hamburger-wrapper {
         background-color: unset;
         color: rgb(var(--accent-color));
     }
+}
+
+.banner {
+    width: 100vw;
+    margin-top: var(--page-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.banner > .title {
+    color: var(--text-color);
+    line-height: 1.1;
+}
+
+.banner > .subtitle {
+    margin-top: 10px;
+    color: var(--text-color-secondary);
+}
+
+/* Footer */
+
+footer {
+    margin-top: var(--page-y-spacing);
+}
+
+footer > .designer {
+    width: 100%;
+    background-color: rgba(var(--accent-color));
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+footer > .designer > a {
+    height: 17px;
+    display: block;
+}
+
+footer > .designer > a > svg {
+    height: 17px;
+    fill: white;
 }

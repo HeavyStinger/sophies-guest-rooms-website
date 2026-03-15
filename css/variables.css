@@ -1,18 +1,21 @@
 :root {
     /* Sizes */
-    --mobile-nav-height: 86.23px;
+    --mobile-nav-height: 101px;
+    --max-section-size: 1250px;
 
     /* Colors */
     --background-color: rgb(240, 241, 246);
     --foreground-color: 252, 252, 252;
     --accent-color: 32, 140, 192;
     --accent-color2: 106, 78, 64;
-    --text-color: #111111;
+    --text-color: rgb(21, 23, 23);
+    --text-color-secondary: rgb(108, 107, 114);
 
     /* Font */
     --primary-font: 'Inter', sans-serif;
 
     /* Spacing */
     --page-x-deadzone: 25px;
+    --page-y-spacing: 35px;
     --section-y-spacing: 25px;
 }

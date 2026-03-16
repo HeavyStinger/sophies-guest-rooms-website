@@ -258,18 +258,7 @@ footer > .content > .left > .contact > a {
     display: block;
     position: relative;
     text-decoration: none;
-}
-
-footer > .content > .left > .contact > a::after {
-    content: "";
-    height: 2px;
-    width: 100%;
-    background-color: rgb(var(--accent-color));
-    margin-top: 2px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    border-radius: 5px;
+    border-bottom: 1px solid white;
 }
 
 footer > .content > .right {
@@ -317,21 +306,7 @@ footer > .cta-container {
     width: calc(100% - (2 * var(--page-x-deadzone)));
     margin: 0 var(--page-x-deadzone);
     display: flex;
-    justify-content: flex-end;
     position: relative;
-}
-
-footer > .cta-container::after {
-    content: "";
-    height: 2px;
-    width: 100%;
-    background-color: rgb(var(--accent-color));
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    border-radius: 5px;
-    z-index: 1;
 }
 
 footer > .cta-container > .cta-button {

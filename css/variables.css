@@ -1,21 +1,29 @@
 :root {
     /* Sizes */
     --mobile-nav-height: 101px;
-    --max-section-size: 1250px;
+    --max-section-size: 1400px;
 
     /* Colors */
-    --background-color: rgb(240, 241, 246);
+    --background-color: rgb(245, 245, 245);
     --foreground-color: 252, 252, 252;
     --accent-color: 32, 140, 192;
     --accent-color2: 106, 78, 64;
-    --text-color: rgb(21, 23, 23);
-    --text-color-secondary: rgb(108, 107, 114);
+    --text-color: rgb(30, 41, 59);
+    --text-color-secondary: rgb(71, 85, 105);
 
     /* Font */
-    --primary-font: 'Inter', sans-serif;
+    --primary-font: "Outfit", "ui-sans-serif", "system-ui";
+    --secondary-font: "Playfair Display", "serif";
 
     /* Spacing */
     --page-x-deadzone: 25px;
-    --page-y-spacing: 35px;
+    --page-y-spacing: 100px;
+    --section-y-spacing: 35px;
     --section-y-spacing: 25px;
+}
+
+@media only screen and (min-width: 767px) {
+    :root {
+        --page-x-deadzone: 50px;
+    }
 }

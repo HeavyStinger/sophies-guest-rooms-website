@@ -14,7 +14,7 @@ body {
     color: var(--text-color);
     font-family: var(--primary-font);
     font-optical-sizing: auto;
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
     overflow-x: hidden;
 }
@@ -27,8 +27,10 @@ body {
     display: block;
     color: white;
     letter-spacing: 1px;
+    text-decoration: none;
     border-radius: 25px;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
@@ -36,6 +38,7 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     color: rgb(var(--accent-color2));
+    transform: translateY(-5px);
 }
 
 .cta-button.secondary {
@@ -98,6 +101,7 @@ nav > .links > li > a {
     text-decoration: none;
     text-align: center;
     color: var(--text-color);
+    font-size: 1.1em;
     border-bottom: 1px solid rgb(var(--accent-color), 0.7);
 }
 
@@ -115,6 +119,7 @@ nav > .links.active {
 
 nav > .links > a {
     margin: 14px 0;
+    font-size: 1.1rem;
 }
 
 nav > .hamburger-wrapper {
@@ -177,6 +182,7 @@ nav > .hamburger-wrapper {
 
 .banner > .title {
     color: var(--text-color);
+    font-family: var(--secondary-font);
     line-height: 1.1;
 }
 
@@ -314,6 +320,11 @@ footer > .cta-container > .cta-button {
     font-size: 0.9rem;
     padding: 10px 17px;
     z-index: 2;
+}
+
+footer > .cta-container > .cta-button:hover {
+    background-color: rgb(var(--accent-color), 0.8);
+    color: white;
 }
 
 /* Designer section of footer */

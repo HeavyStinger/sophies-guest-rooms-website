@@ -298,7 +298,7 @@
     display: none;
 }
 
-.location>iframe {
+.location > iframe {
     max-width: var(--max-section-size);
     height: 450px;
     border-radius: 10px;
@@ -369,7 +369,7 @@
 .testimonials > .group {
     display: flex;
     gap: 50px;
-    animation: infinite-scroll 20s linear infinite;
+    animation: infinite-scroll 37s linear infinite;
 }
 
 .testimonials > .group:nth-last-child() {

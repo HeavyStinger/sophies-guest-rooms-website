@@ -12,7 +12,7 @@
     width: 100vw;
     /* margin-top: 2px; */
     background-image:
-        linear-gradient(to top, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.2)),
+        linear-gradient(to top, rgba(0, 0, 0, 0.7) 35%, rgba(0, 0, 0, 0.1) 80%, rgba(0, 0, 0, 0)),
         url('../media/images/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -167,19 +167,19 @@
 .services-overview > .content > .card > .icon {
     height: 70px;
     width: 70px;
-    background-color: rgba(var(--accent-color), 0.14);
+    background-color: rgba(var(--accent-color2), 0.14);
     padding: 10px;
     border-radius: 50%;
 }
 
 .services-overview > .content > .card > .icon > svg {
     height: 100%;
-    fill: rgb(var(--accent-color));
+    fill: rgb(var(--accent-color2));
 }
 
 .services-overview > .content > .card > .title {
     margin-top: 15px;
-    color: rgb(var(--accent-color));
+    color: rgb(var(--accent-color2));
     font-weight: 500;
 }
 
@@ -190,7 +190,7 @@
 
     .services-overview > .content > .card:nth-child(n+2) {
         border-top: none;
-        border-left: 2px solid rgb(var(--accent-color));
+        border-left: 2px solid rgb(var(--accent-color2));
     }
 }
 
@@ -429,7 +429,9 @@
 /* Gallery */
 
 .gallery {
-    margin-top: var(--section-y-spacing);
+    max-width: var(--max-section-size);
+    width: 100%;
+    margin: var(--section-y-spacing) auto 0 auto;
     padding: 0 var(--page-x-deadzone);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));

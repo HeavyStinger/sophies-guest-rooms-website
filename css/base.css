@@ -62,7 +62,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid rgb(var(--accent-color));
+    border-bottom: 2px solid rgb(var(--accent-color2));
     z-index: 2;
 }
 
@@ -161,18 +161,19 @@ nav > .hamburger-wrapper {
     }
 
     nav > .links > li > a.active {
-        color: rgb(var(--accent-color));
+        color: rgb(var(--accent-color2));
     }
 
     nav > .links > li > a:hover {
         background-color: unset;
-        color: rgb(var(--accent-color));
+        color: rgb(var(--accent-color2));
     }
 }
 
 .banner {
+    max-width: var(--max-section-size);
     width: 100vw;
-    margin-top: var(--page-y-spacing);
+    margin: var(--page-y-spacing) auto 0 auto;
     padding: 0 var(--page-x-deadzone);
     display: flex;
     flex-direction: column;
@@ -194,14 +195,15 @@ nav > .hamburger-wrapper {
 /* Footer */
 
 footer {
-    background-color: rgb(var(--accent-color2));
+    background-color: rgb(var(--foreground-color));
     margin-top: var(--page-y-spacing);
-    color: white;
+    /* color: white; */
+    border-top: 2px solid rgb(var(--accent-color2));
 }
 
 footer > .content {
-    width: 100%;
     padding: calc(var(--section-y-spacing) * 2) var(--page-x-deadzone);
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -229,7 +231,7 @@ footer > .content > .left > .socials > .social {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid rgb(var(--accent-color2));
     border-radius: 50%;
     cursor: pointer;
 }
@@ -245,7 +247,7 @@ footer > .content > .left > .socials > .social:hover > svg {
 footer > .content > .left > .socials > .social > svg {
     height: 25px;
     width: 25px;
-    fill: white;
+    fill: rgb(var(--accent-color2));
 }
 
 footer > .content > .left > .contact {
@@ -256,7 +258,7 @@ footer > .content > .left > .contact {
 
 footer > .content > .left > .contact > * {
     font-size: 1.1rem;
-    color: white;
+    color: var(--text-color-secondary);
 }
 
 footer > .content > .left > .contact > a {
@@ -264,7 +266,7 @@ footer > .content > .left > .contact > a {
     display: block;
     position: relative;
     text-decoration: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(var(--accent-color2));
 }
 
 footer > .content > .right {
@@ -274,6 +276,7 @@ footer > .content > .right {
 }
 
 footer > .content > .right > .title {
+    font-family: var(--secondary-font);
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -287,13 +290,13 @@ footer > .content > .right > .links {
 
 footer > .content > .right > .links > li > a {
     position: relative;
-    color: rgb(238, 238, 238);
+    color: var(--text-color-secondary);
     text-decoration: none;
     font-size: 1.1rem;
 }
 
 footer > .content > .right > .links > li > a:hover {
-    color: rgb(var(--accent-color));
+    color: rgb(var(--accent-color2));
 }
 
 footer > .content > .right > .links > li > a.active::after {
@@ -304,7 +307,7 @@ footer > .content > .right > .links > li > a.active::after {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgb(var(--accent-color));
+    background-color: rgb(var(--accent-color2));
     border-radius: 5px;
 }
 
@@ -315,23 +318,23 @@ footer > .cta-container {
     position: relative;
 }
 
-footer > .cta-container > .cta-button {
-    background-color: rgb(var(--accent-color));
+/* footer > .cta-container > .cta-button {
+    background-color: rgb(var(--accent-color2));
     font-size: 0.9rem;
     padding: 10px 17px;
     z-index: 2;
 }
 
 footer > .cta-container > .cta-button:hover {
-    background-color: rgb(var(--accent-color), 0.8);
+    background-color: rgb(var(--accent-color2), 0.8);
     color: white;
-}
+} */
 
 /* Designer section of footer */
 
 footer > .designer {
     width: 100%;
-    background-color: rgba(var(--accent-color));
+    background-color: rgba(var(--accent-color2));
     margin-top: calc(var(--section-y-spacing) * 2);
     padding: 10px;
     display: flex;

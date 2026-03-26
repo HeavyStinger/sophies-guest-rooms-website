@@ -230,7 +230,7 @@
     position: relative;
 }
 
-.rooms > .room>img {
+.rooms > .room > img {
     border-radius: 10px;
 }
 
@@ -271,7 +271,7 @@
 }
 
 .rooms > .room > .content > .bottom {
-    margin-top: 14px;
+    /* margin-top: 14px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -417,6 +417,13 @@
 .testimonials > .group > .testimonial > .bottom {
     font-size: 1.04rem;
     color: var(--text-color-secondary);
+    flex-grow: 1;
+    display: -webkit-box;
+    line-clamp: 4;
+    line-height: 1.4;
+    -webkit-line-clamp: 4; /* number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Gallery */
@@ -675,7 +682,7 @@
 .highlights > .content > .card > .info {
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
-    padding: 40px 10px 10px 10px;
+    padding: 40px 14px 14px 14px;
     position: absolute;
     bottom: 0;
     border-radius: 0 0 10px 10px;
@@ -758,7 +765,7 @@
     box-shadow: 1px 10px 11px rgba(119, 119, 119, 0.1);
     overflow: hidden;
     z-index: 1;
-    transition: max-height 0.5s ease, transform 0.5s ease, padding 0.5s ease;
+    transition: max-height 0.2s ease, transform 0.2s ease, padding 0.2s ease;
 }
 
 .about-us-faq > .content > .faq.active > p {

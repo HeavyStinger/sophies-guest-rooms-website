@@ -75,7 +75,8 @@
                                     <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
                                     <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
                                 </svg>
-                            </a> referrals
+                            </a>
+                            referrals
                         </div>
                     </div>
                     <a class="cta-button" href="https://www.hostelworld.com/pwa/hosteldetails.php/Sophies-Guest-Rooms/Caye-Caulker/86505" target="_blank">See Availability</a>
@@ -138,34 +139,150 @@
                 We’ll help you line up the best of Caye Caulker. Whether that’s reef days, food crawls, or pure hammock time.
             </p>
         </section>
+
         <section class="highlights">
             <div class="content">
                 <div class="card">
-                    <img src="./media/images/holchan.jpg" height="100%" width="100%" alt="Hol Chan Shark Ray Alley Snorkeling" loading="lazy">
+                    <img src="./media/images/holchan.jpg" height="100%" width="100%" alt="Tours" loading="lazy">
                     <div class="info">
-                        <h3>Hol Chan & Shark Ray Alley</h3>
-                        <p>Swim with nurse sharks, rays & turtles</p>
+                        <h3>Tours</h3>
+                        <p>See the barrier reef and swim with nurse sharks and rays</p>
+                        <button class="cta-button" data-dialog-type="tours">
+                            View Tours
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window-stack" viewBox="0 0 16 16">
+                                <path d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                <path d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z"/>
+                            </svg>
+                        </button>
+                        <dialog id="dialog-tours" closedby="any">
+                            <div class="top">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </div>
+                            <div class="bottom">
+                                <h2>Sailing Trips</h2>
+                                <ul>
+                                    <li>Ragga Sailing Adventures</li>
+                                    <li>Wanderlust Catamaran Sailing</li>
+                                </ul>
+
+                                <h2>Snorkeling Trips</h2>
+                                <ul>
+                                    <li>Blue Wave Divers</li>
+                                    <li>Nemo Adventures</li>
+                                    <li>Wanderlust Adventures</li>
+                                    <li>Frenches Diving</li>
+                                </ul>
+
+                                <h2>Fishing Trips</h2>
+                                <ul>
+                                    <li>Nemo Adventures</li>
+                                    <ul>
+                                        <li>
+                                            Grilling your catch of the day upon request. Half and full day trips. Price depends on trip
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1600699899970-b1c9fadd8f9e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="100%" width="100%" alt="Food" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1600699899970-b1c9fadd8f9e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="100%" width="100%" alt="Island Eats" loading="lazy">
                     <div class="info">
                         <h3>Island Eats</h3>
-                        <p>Fry Jacks, ceviche, & rum punch</p>
+                        <p>Fry Jacks, Fry fish, Rice and Beans, Ceviche & more</p>
+                        <button class="cta-button" data-dialog-type="island-eats">
+                            View Restaurants
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window-stack" viewBox="0 0 16 16">
+                                <path d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                <path d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z"/>
+                            </svg>
+                        </button>
+                        <dialog id="dialog-island-eats" closedby="any">
+                            <div class="top">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </div>
+                            <div class="bottom">
+                                <h2>Affordable Restaurants</h2>
+                                <ul>
+                                    <li>Maggies Kitchen (Local Lunch and Dinner)</li>
+                                    <li>Auntie's (local Breakfast and American Food)</li>
+                                    <li>Swings (Drinks and Dinner)</li>
+                                    <li>Martinez (Famopus Rice and Beans)</li>
+                                    <li>Wish Willy (Dinner Buffet Style)</li>
+                                    <li>Magic Cup (Coffe juice Sandwiches and Deserts)</li>
+                                </ul>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./media/images/hero.jpg" height="100%" width="100%" alt="The Split" loading="lazy">
+                    <img src="./media/images/tarpon.jpg" height="100%" width="100%" alt="Activities" loading="lazy">
                     <div class="info">
-                        <h3>The Split</h3>
-                        <p>Caye Caulker’s famous swim & sunset spot is 5 mins away.</p>
+                        <h3>Fun activities</h3>
+                        <p>Goi sailing, feed the tarpons, and see the sting rays</p>
+                        <button class="cta-button" data-dialog-type="destinations">
+                            View Activities
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window-stack" viewBox="0 0 16 16">
+                                <path d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                <path d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z"/>
+                            </svg>
+                        </button>
+                        <dialog id="dialog-destinations" closedby="any">
+                            <div class="top">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </div>
+                            <div class="bottom">
+                                <h2>Activities</h2>
+                                <ul>
+                                    <li>Tarpon feeding</li>
+                                    <li>Bike riding</li>
+                                    <li>Snorkeling and Diving</li>
+                                    <li>Sailing</li>
+                                    <li>Fishing</li>
+                                    <li>Massages</li>
+                                    <li>Feeding the stingrays at Iguana Reef</li>
+                                </ul>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./media/images/tarpon.jpg" height="100%" width="100%" alt="Kayak & Paddle" loading="lazy">
+                    <img src="https://www.marlinespadas.net/templates/website/images/intro-slider-image-1-1548192235.jpg" height="100%" width="100%" alt="Marlin Espadas" loading="lazy">
                     <div class="info">
-                        <h3>Feeding the Tarpons</h3>
-                        <p>Buy a bag of small fish to feed the tarpons and watch them jump</p>
+                        <h3>Marlin Espadas</h3>
+                        <p>We sell Marlin Espadas Tickets in the office</p>
+                        <button class="cta-button" data-dialog-type="marlin-espadas">
+                            View Activities
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window-stack" viewBox="0 0 16 16">
+                                <path d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                                <path d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z"/>
+                            </svg>
+                        </button>
+                        <dialog id="dialog-marlin-espadas" closedby="any">
+                            <div class="top">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </div>
+                            <div class="bottom">
+                                <h2>Marlin Espadas</h2>
+                                <ul>
+                                    <li>Bus departs from water taxi terminal in Belize City at 12:00pm</li>
+                                    <li>Prices Vary</li>
+                                    <li>From Belize to Flores</li>
+                                    <li>From Belize to Chetumal</li>
+                                    <li>From Belize to San Ignacio</li>
+                                    <li>From Belize to Bacalar</li>
+                                </ul>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </div>
@@ -177,6 +294,7 @@
                 From reef days to hammock hangs, see why guests love Sophie's Guest Rooms.
             </p>
         </section>
+
         <section class="testimonials">
             <div class="group">
                 <div class="testimonial">
@@ -390,6 +508,7 @@
                 Find answers to common questions about your stay at Sophie's Guest Rooms.
             </p>
         </section>
+
         <section class="about-us-faq">
             <div class="content">
                 <span class="faq" tabindex="0">
@@ -418,6 +537,7 @@
                 </span>
             </div>
         </section>
+
         <p style="display: none;">
             PLEASE READ OUR POLICY INFORMATION BEFORE BOOKING. PLEAE NOTE THAT ONLY OUR DELUXE ROOM OFFERS AC AT AN ADDITION COST OF 15US PER NIGHT.THE COST OF THE ROOMS AS LISTED IS FOR 1 PERSON OR 2 PEOPLE ONLY, OUR ROOMS CAN SLEEP UP TO 3 PERSON, PLEASE EMAIL OR CALL WHATSAPP FOR FUTHER INFORMATION ON HAVING A THIRD PERSON.
 
@@ -529,6 +649,23 @@ No unauthorized or unregistered guest allowed on the property.
     </footer>
     <script src="./js/main.js"></script>
     <script src="./js/about-us.js"></script>
+    <script>
+        const dialogButtons = document.querySelectorAll("button[data-dialog-type]");
+        dialogButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const dialogType = "dialog-" + button.getAttribute("data-dialog-type");
+                console.log("Opening dialog:", dialogType);
+                const dialog = document.getElementById(dialogType);
+                if (dialog) {
+                    const closeButton = dialog.querySelector(".top > svg");
+                    closeButton.addEventListener("click", () => {
+                        dialog.close();
+                    });
+                    dialog.showModal();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

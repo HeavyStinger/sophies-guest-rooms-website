@@ -58,6 +58,7 @@
             </div>
 
             <form id="hotelForm" novalidate>
+                <input type="hidden" name="access_key" value="cf316895-998b-4abd-ad7e-bf1001ca71fa">
             <div class="field-grid">
                 <div class="field span-2">
                     <label for="name">Full name</label>
@@ -116,6 +117,8 @@
                 <label for="note">Note</label>
                 <textarea id="note" name="note" placeholder="Arrival time, special requests, or anything you'd like us to know."></textarea>
                 </div>
+
+                <div class="h-captcha" data-captcha="true"></div>
             </div>
 
             <div class="actions">
@@ -183,5 +186,7 @@
     </footer>
     <script src="./js/main.js"></script>
     <script src="./js/contact.js"></script>
+    <!-- Step 2: Add the Web3Forms script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>

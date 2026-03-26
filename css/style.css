@@ -764,6 +764,70 @@
     opacity: 0.8;
 }
 
+.highlights > .content > .card > .info > .cta-button {
+    background-color: rgba(var(--accent-color2), 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    padding: 2px 20px;
+    position: absolute;
+    right: 7px;
+    bottom: 10.4px;
+    font-size: 0.77rem;
+}
+
+.highlights > .content > .card > .info > .cta-button > svg {
+    height: 10px;
+    width: 10px;
+    /* fill: rgb(var(--accent-color2)); */
+    margin-left: 2px;
+}
+
+.highlights > .content > .card > .info > dialog {
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--background-color);
+    border: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.highlights > .content > .card > .info > dialog > .top {
+    width: 100%;
+    background-color: rgb(var(--foreground-color));
+    padding: 5px 0 0 5px;
+    box-shadow: 0px 2px 10px rgba(122, 122, 122, 0.2);
+}
+
+.highlights > .content > .card > .info > dialog > .top > svg {
+    height: 35px;
+    width: 35px;
+    fill: red;
+}
+
+.highlights > .content > .card > .info > dialog > .bottom {
+    max-height: 200px;
+    padding: 11px 17px;
+    overflow-y: auto;
+}
+
+.highlights > .content > .card > .info > dialog > .bottom > h2 {
+    font-family: var(--secondary-font);
+}
+
+.highlights > .content > .card > .info > dialog > .bottom > h2:nth-child(n+2) {
+    margin-top: 25px;
+}
+
+.highlights > .content > .card > .info > dialog > .bottom  ul {
+    margin-top: 11px;
+    margin-left: 20px;
+    display: block;
+}
+
 @media only screen and (min-width: 1424px) {
     .highlights > .content {
         justify-content: space-between;

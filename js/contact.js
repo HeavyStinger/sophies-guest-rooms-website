@@ -24,28 +24,28 @@ function formatDate(value) {
     });
 }
 
-function syncDates() {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+// function syncDates() {
+//     const today = new Date();
+//     today.setHours(0, 0, 0, 0);
 
-    const defaultCheckIn = addDays(today, 1);
-    const defaultCheckOut = addDays(defaultCheckIn, 1);
+//     const defaultCheckIn = addDays(today, 1);
+//     const defaultCheckOut = addDays(defaultCheckIn, 1);
 
-    checkIn.min = toISO(today);
+//     checkIn.min = toISO(today);
 
-    if (!checkIn.value) {
-    checkIn.value = toISO(defaultCheckIn);
-    }
+//     if (!checkIn.value) {
+//     checkIn.value = toISO(defaultCheckIn);
+//     }
 
-    const inDate = new Date(checkIn.value + "T00:00:00");
-    const minOutDate = addDays(inDate, 1);
+//     const inDate = new Date(checkIn.value + "T00:00:00");
+//     const minOutDate = addDays(inDate, 1);
 
-    checkOut.min = toISO(minOutDate);
+//     checkOut.min = toISO(minOutDate);
 
-    if (!checkOut.value || new Date(checkOut.value + "T00:00:00") <= inDate) {
-    checkOut.value = toISO(minOutDate);
-    }
-}
+//     if (!checkOut.value || new Date(checkOut.value + "T00:00:00") <= inDate) {
+//     checkOut.value = toISO(minOutDate);
+//     }
+// }
 
 function validatePhone() {
     const digits = phone.value.replace(/\D/g, "");
@@ -56,37 +56,37 @@ function validatePhone() {
     }
 }
 
-syncDates();
+// syncDates();
 
-checkIn.addEventListener("change", () => {
-    checkOut.setCustomValidity("");
-    syncDates();
-});
+// checkIn.addEventListener("change", () => {
+//     checkOut.setCustomValidity("");
+//     syncDates();
+// });
 
-checkOut.addEventListener("change", () => {
-    const inDate = new Date(checkIn.value + "T00:00:00");
-    const outDate = new Date(checkOut.value + "T00:00:00");
-    if (outDate <= inDate) {
-    checkOut.setCustomValidity("Check-out must be after check-in.");
-    } else {
-    checkOut.setCustomValidity("");
-    }
-});
+// checkOut.addEventListener("change", () => {
+//     const inDate = new Date(checkIn.value + "T00:00:00");
+//     const outDate = new Date(checkOut.value + "T00:00:00");
+//     if (outDate <= inDate) {
+//     checkOut.setCustomValidity("Check-out must be after check-in.");
+//     } else {
+//     checkOut.setCustomValidity("");
+//     }
+// });
 
 phone.addEventListener("input", validatePhone);
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
     event.preventDefault();
     validatePhone();
 
-    const inDate = new Date(checkIn.value + "T00:00:00");
-    const outDate = new Date(checkOut.value + "T00:00:00");
+    // const inDate = new Date(checkIn.value + "T00:00:00");
+    // const outDate = new Date(checkOut.value + "T00:00:00");
 
-    if (outDate <= inDate) {
-    checkOut.setCustomValidity("Check-out must be after check-in.");
-    } else {
-    checkOut.setCustomValidity("");
-    }
+    // if (outDate <= inDate) {
+    // checkOut.setCustomValidity("Check-out must be after check-in.");
+    // } else {
+    // checkOut.setCustomValidity("");
+    // }
 
     if (!form.reportValidity()) return;
 
@@ -96,22 +96,42 @@ form.addEventListener("submit", (event) => {
     const start = formatDate(data.get("checkin"));
     const end = formatDate(data.get("checkout"));
 
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        window.alert("Please fill out captcha field");
+		submitButton.disabled = false;
+        submitButton.classList.remove("is-loading");
+        return;
+    }
+
     successMessage.classList.remove("show");
     submitButton.disabled = true;
     submitButton.classList.add("is-loading");
     submitButton.querySelector("span").textContent = "Sending request";
 
-    setTimeout(() => {
-    successMessage.textContent = `Thank you, ${firstName}. Your stay request for ${start} to ${end} has been received.`;
-    successMessage.classList.add("show");
-    form.reset();
-    syncDates();
+    // New
+
+    const formData = new FormData(form);
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        // Success
+        successMessage.textContent = `Thank you, ${firstName}. Your has message been sent.`;
+        successMessage.classList.add("show");
+        form.reset();
+        formPanel.classList.add("submitted");
+        setTimeout(() => formPanel.classList.remove("submitted"), 1200);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
 
     submitButton.disabled = false;
     submitButton.classList.remove("is-loading");
-    submitButton.querySelector("span").textContent = "Request stay";
-
-    formPanel.classList.add("submitted");
-    setTimeout(() => formPanel.classList.remove("submitted"), 1200);
-    }, 1100);
+    submitButton.querySelector("span").textContent = "Confirm";
 });

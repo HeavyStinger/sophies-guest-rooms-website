@@ -248,7 +248,7 @@
     border-radius: 0px 0px 10px 10px;
 }
 
-.rooms > .room > .content>h2 {
+.rooms > .room > .content > h2 {
     font-weight: 500;
 }
 
@@ -266,7 +266,7 @@
     color: rgb(190, 190, 190);
 }
 
-.rooms > .room > .content > .amenities > .amenity>svg {
+.rooms > .room > .content > .amenities > .amenity > svg {
     fill: rgba(190, 190, 190, 0.8);
 }
 
@@ -282,14 +282,18 @@
     font-weight: bold;
 }
 
-.rooms > .room > .content > .bottom > .price>span {
+.rooms > .room > .content > .bottom > .price > span {
     font-size: 1rem;
     font-weight: normal;
 }
 
-.rooms > .room > .content > .bottom>a {
+.rooms > .room > .content > .bottom > .cta-button {
     padding: 7px 20px;
     font-size: 0.9rem;
+}
+
+.rooms > .room > .content > .bottom > .cta-button:hover {
+    transform: unset;
 }
 
 .location {
@@ -302,6 +306,23 @@
     max-width: var(--max-section-size);
     height: 450px;
     border-radius: 10px;
+}
+
+.rooms > .room > .content > dialog > .bottom > img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.rooms > .room > .content > dialog > .bottom > img:nth-child(n+2) {
+    margin-top: 25px;
+}
+
+.rooms > .room > .content > dialog > .bottom > h2 {
+    margin-top: 10px;
+}
+
+.rooms > .room > .content > dialog > .bottom > p {
+    color: var(--text-color-secondary);
 }
 
 @media only screen and (min-width: 961px) {

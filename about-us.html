@@ -189,7 +189,7 @@
                     </svg>
                     <div class="right">
                         <h2>No laundry on site</h2>
-                        <p>No laundry can be done in the rooms or bathrooms</p>
+                        <p>No laundry allowed in the rooms or bathrooms</p>
                     </div>
                 </div>
                 <div class="card">
@@ -205,7 +205,7 @@
         </section>
 
         <section class="banner">
-            <h2 class="title">Slow mornings. Salty afternoons. Starlit nights</h1>
+            <h2 class="title">Slow mornings. Salty afternoons. Amazing Sunset views</h1>
             <p class="subtitle">
                 We’ll help you line up the best of Caye Caulker. Whether that’s reef days, food crawls, or pure hammock time.
             </p>
@@ -260,7 +260,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1600699899970-b1c9fadd8f9e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="100%" width="100%" alt="Island Eats" loading="lazy">
+                    <img src="https://cdn-5e9cd8e4f911c8155c507484.closte.com/wp-content/uploads/2022/10/image00001-1536x2048.jpeg" height="100%" width="100%" alt="Island Eats" loading="lazy">
                     <div class="info">
                         <h3>Island Eats</h3>
                         <p>Fry Jacks, Fry fish, Rice and Beans, Ceviche & more</p>
@@ -285,7 +285,7 @@
                                     <li>Swings (Drinks and Dinner)</li>
                                     <li>Martinez (Famopus Rice and Beans)</li>
                                     <li>Wish Willy (Dinner Buffet Style)</li>
-                                    <li>Magic Cup (Coffe juice Sandwiches and Deserts)</li>
+                                    <li>Ice and Beans (Coffe juice Sandwiches and Deserts)</li>
                                 </ul>
                             </div>
                         </dialog>
@@ -325,10 +325,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://www.marlinespadas.net/templates/website/images/intro-slider-image-1-1548192235.jpg" height="100%" width="100%" alt="Marlin Espadas" loading="lazy">
+                    <img src="http://www.ourbelizevacation.com/uploads/4/2/1/7/4217382/belize-water-taxi-2_orig.jpg" height="100%" width="100%" alt="Marlin Espadas" loading="lazy">
                     <div class="info">
-                        <h3>Marlin Espadas</h3>
-                        <p>We sell Marlin Espadas Tickets in the office</p>
+                        <h3>Transportation</h3>
+                        <p>Get around Caye Caulker and the surrounding areas</p>
                         <button class="cta-button" data-dialog-type="marlin-espadas">
                             View Activities
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-window-stack" viewBox="0 0 16 16">
@@ -343,6 +343,25 @@
                                 </svg>
                             </div>
                             <div class="bottom">
+                                <h2>San pedro belize Express (Water Taxi)</h2>
+                                <ul>
+                                    <li>Belize City to Caye Caulker</li>
+                                    <li>Belize City to San Pedro</li>
+                                    <li>Caye Caulker to Belize City</li>
+                                    <li>Caye caulker to San Pedro</li>
+                                    <li>San pedro to belize City</li>
+                                    <li>San Pedro to Caye Caulker</li>
+                                    <li>Caye Caulker to Chetumal MX</li>
+                                    <li>San pedro to Chetumal MX</li>
+                                    <li>Chetumal MX to Caye Caulker and Caye Caulker</li>
+                                    <li>View <a href="https://belizewatertaxi.com/schedule/" target="_blank">Schedule</a></li>
+                                </ul>
+                                <h2>Taxi Service</h2>
+                                <ul>
+                                    <li>Pick up from Airport to Water taxi</li>
+                                    <li>Pick up from Water Taxi to Airport</li>
+                                    <li>Taxi Island Service</li>
+                                </ul>
                                 <h2>Marlin Espadas</h2>
                                 <ul>
                                     <li>Bus departs from water taxi terminal in Belize City at 12:00pm</li>
@@ -720,23 +739,7 @@ No unauthorized or unregistered guest allowed on the property.
     </footer>
     <script src="./js/main.js"></script>
     <script src="./js/about-us.js"></script>
-    <script>
-        const dialogButtons = document.querySelectorAll("button[data-dialog-type]");
-        dialogButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                const dialogType = "dialog-" + button.getAttribute("data-dialog-type");
-                console.log("Opening dialog:", dialogType);
-                const dialog = document.getElementById(dialogType);
-                if (dialog) {
-                    const closeButton = dialog.querySelector(".top > svg");
-                    closeButton.addEventListener("click", () => {
-                        dialog.close();
-                    });
-                    dialog.showModal();
-                }
-            });
-        });
-    </script>
+    <script src="./js/dialog.js"></script>
 </body>
 
 </html>

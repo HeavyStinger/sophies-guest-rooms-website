@@ -1,14 +1,12 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"); */
-/* var(--font-secondary) */
+/* var(--secondary-font) */
 
     :root {
       --cream: #f7f1e8;
-      --sand: #e6d5bd;
-      --gold: #a8824b;
-      --ink: #172228;
-      --ink-soft: #41515a;
-      --panel: rgba(250, 245, 236, 0.9);
-      --field: rgba(255, 252, 247, 0.92);
+      --ink: var(--text-color);
+      --ink-soft: var(--text-color-secondary);
+      --panel: rgb(var(--foreground-color));
+      --field: rgba(var(--foreground-color), 0.92);
       --line: rgba(23, 34, 40, 0.14);
       --focus: rgba(var(--accent-color2), 0.18);
       --success: #1f6b55;
@@ -142,7 +140,7 @@
 
     .panel-head h2 {
       margin: 0;
-      font-family: var(--font-secondary);
+      font-family: var(--secondary-font);
       font-size: clamp(2rem, 3vw, 2.5rem);
       line-height: 1;
       font-weight: 600;
@@ -223,7 +221,7 @@
     select:focus,
     textarea:focus {
       outline: none;
-      border-color: rgba(168, 130, 75, 0.65);
+      border-color: rgba(var(--accent-color2), 0.65);
       box-shadow: 0 0 0 4px var(--focus);
       transform: translateY(-1px);
       background: #fffdf8;
@@ -297,6 +295,19 @@
       font-size: 0.86rem;
       color: rgba(65, 81, 90, 0.92);
       text-align: center;
+    }
+
+    .microcopy > a {
+      width: fit-content !important;
+      background: none;
+      padding: 0 !important;
+      display: inline-block;
+      color: rgb(var(--accent-color2));
+      font-size: 0.86rem;
+      text-decoration: underline;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
     }
 
     .submitted {

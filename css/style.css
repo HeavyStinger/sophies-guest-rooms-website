@@ -105,7 +105,7 @@
     content: "";
     height: 100%;
     width: 2px;
-    background-color: rgb(var(--accent-color));
+    background-color: rgb(var(--accent-color2));
     position: absolute;
     left: 0;
     border-radius: 25px;
@@ -775,6 +775,10 @@
     font-size: 0.77rem;
 }
 
+.highlights > .content > .card > .info > .cta-button:hover {
+    transform: unset;
+}
+
 .highlights > .content > .card > .info > .cta-button > svg {
     height: 10px;
     width: 10px;
@@ -782,9 +786,9 @@
     margin-left: 2px;
 }
 
-.highlights > .content > .card > .info > dialog {
-    max-width: 500px;
-    width: 100%;
+dialog {
+    max-width: 700px;
+    width: calc(100% - (var(--page-x-deadzone) * 2));
     background-color: var(--background-color);
     border: none;
     position: fixed;
@@ -795,26 +799,27 @@
     overflow: hidden;
 }
 
-.highlights > .content > .card > .info > dialog > .top {
+dialog > .top {
     width: 100%;
     background-color: rgb(var(--foreground-color));
     padding: 5px 0 0 5px;
     box-shadow: 0px 2px 10px rgba(122, 122, 122, 0.2);
 }
 
-.highlights > .content > .card > .info > dialog > .top > svg {
+.top > svg {
     height: 35px;
     width: 35px;
     fill: red;
+    cursor: pointer;
 }
 
-.highlights > .content > .card > .info > dialog > .bottom {
-    max-height: 200px;
+dialog > .bottom {
+    max-height: 370px;
     padding: 11px 17px;
     overflow-y: auto;
 }
 
-.highlights > .content > .card > .info > dialog > .bottom > h2 {
+dialog > .bottom > h2 {
     font-family: var(--secondary-font);
 }
 
@@ -862,15 +867,15 @@
 
 .about-us-faq > .content > .faq::after {
     content: "";
-    height: 5px;
-    width: 5px;
+    height: 7px;
+    width: 7px;
     position: absolute;
     top: 50%;
     right: calc(25px - 2.5px);
     transform: translateY(-50%) rotate(45deg);
     display: block;
-    border-right: 2px solid rgb(var(--accent-color));
-    border-bottom: 2px solid rgb(var(--accent-color));
+    border-right: 2px solid rgb(var(--accent-color2));
+    border-bottom: 2px solid rgb(var(--accent-color2));
     transition: transform 0.1s ease;
 }
 
@@ -912,4 +917,22 @@
     .about-us-faq > .content > .faq:nth-child(even) {
         margin-left: auto;
     }
+}
+
+.privacy-policy {
+    width: 100%;
+    padding: 0 var(--page-x-deadzone);
+}
+
+.privacy-policy > .content {
+    max-width: var(--max-section-size);
+    width: 100%;
+    margin: var(--section-y-spacing) auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.privacy-policy > .content > p {
+    line-height: 1.6;
 }

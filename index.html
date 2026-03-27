@@ -175,6 +175,8 @@
             <p class="subtitle">Caye Caulker, Belize. We are around the corner of the lazy lizard, that offers loads of
                 parting and fun in the sun</p>
         </section>
+
+        <!-- ! Add images and some information to respective dialog -->
         <section class="details">
             <a href="https://maps.app.goo.gl/zSkeq3UWQ42CMjss7" class="cta-button">View location on google maps</a>
             <section class="location">
@@ -207,9 +209,41 @@
                             </div> -->
                         </div>
                         <div class="bottom">
-                            <span class="price">$68 USD<span>/ night</span></span>
-                            <a class="cta-button" href="https://www.hostelworld.com/pwa/hosteldetails.php/Sophies-Guest-Rooms/Caye-Caulker/86505" target="_blank">View Room</a>
+                            <span class="price">$68 USD<span>/ night + tax</span></span>
+                            <button class="cta-button" data-dialog-type="deluxe-room">View Room</button>
                         </div>
+                        <dialog id="dialog-deluxe-room" closedby="any">
+                            <div class="top">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </div>
+                            <div class="bottom">
+                                <h2>Sailing Trips</h2>
+                                <ul>
+                                    <li>Ragga Sailing Adventures</li>
+                                    <li>Wanderlust Catamaran Sailing</li>
+                                </ul>
+
+                                <h2>Snorkeling Trips</h2>
+                                <ul>
+                                    <li>Blue Wave Divers</li>
+                                    <li>Nemo Adventures</li>
+                                    <li>Wanderlust Adventures</li>
+                                    <li>Frenches Diving</li>
+                                </ul>
+
+                                <h2>Fishing Trips</h2>
+                                <ul>
+                                    <li>Nemo Adventures</li>
+                                    <ul>
+                                        <li>
+                                            Grilling your catch of the day upon request. Half and full day trips. Price depends on trip
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
                 <div class="room">
@@ -236,9 +270,41 @@
                             </div> -->
                         </div>
                         <div class="bottom">
-                            <span class="price">$58 USD<span>/ night</span></span>
-                            <a class="cta-button" href="https://www.hostelworld.com/pwa/hosteldetails.php/Sophies-Guest-Rooms/Caye-Caulker/86505" target="_blank">View Room</a>
+                            <span class="price">$58 USD<span>/ night + tax</span></span>
+                            <button class="cta-button" data-dialog-type="standard-room">View Room</button>
                         </div>
+                        <dialog id="dialog-standard-room" closedby="any">
+                            <div class="top">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </div>
+                            <div class="bottom">
+                                <h2>Sailing Trips</h2>
+                                <ul>
+                                    <li>Ragga Sailing Adventures</li>
+                                    <li>Wanderlust Catamaran Sailing</li>
+                                </ul>
+
+                                <h2>Snorkeling Trips</h2>
+                                <ul>
+                                    <li>Blue Wave Divers</li>
+                                    <li>Nemo Adventures</li>
+                                    <li>Wanderlust Adventures</li>
+                                    <li>Frenches Diving</li>
+                                </ul>
+
+                                <h2>Fishing Trips</h2>
+                                <ul>
+                                    <li>Nemo Adventures</li>
+                                    <ul>
+                                        <li>
+                                            Grilling your catch of the day upon request. Half and full day trips. Price depends on trip
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </section>
@@ -517,6 +583,7 @@
         </div>
     </footer>
     <script src="./js/main.js"></script>
+    <script src="./js/dialog.js"></script>
 </body>
 
 </html>

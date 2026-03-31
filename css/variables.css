@@ -10,6 +10,8 @@
     --accent-color2: 32, 140, 192;
     --text-color: rgb(30, 41, 59);
     --text-color-secondary: rgb(71, 85, 105);
+    --text-color-heading: white;
+    --text-color-subheading: whitesmoke;
 
     /* Font */
     --primary-font: "Outfit", "ui-sans-serif", "system-ui";

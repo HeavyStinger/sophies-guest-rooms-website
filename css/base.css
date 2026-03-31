@@ -104,7 +104,7 @@ nav > .links > li > a {
     text-align: center;
     color: var(--text-color);
     font-size: 1.1em;
-    border-bottom: 1px solid rgb(var(--accent-color), 0.7);
+    border-bottom: 1px solid rgb(var(--accent-color2), 0.7);
 }
 
 nav > .links > li > a:hover {
@@ -158,6 +158,7 @@ nav > .hamburger-wrapper {
     nav > .links > li > a {
         width: fit-content;
         padding: 7px 14px;
+        font-size: 1.277777777rem;
         border: none;
         border-radius: 10px;
     }
@@ -184,14 +185,18 @@ nav > .hamburger-wrapper {
 }
 
 .banner > .title {
-    color: var(--text-color);
+    color: var(--text-color-heading);
     font-family: var(--secondary-font);
     line-height: 1.1;
 }
 
 .banner > .subtitle {
     margin-top: 10px;
-    color: var(--text-color-secondary);
+    color: var(--text-color-subheading);
+}
+
+.banner > .subtitle > a {
+    color: rgb(var(--accent-color));
 }
 
 /* Footer */
@@ -355,4 +360,14 @@ footer > .designer > a {
 footer > .designer > a > svg {
     height: 17px;
     fill: white;
+}
+
+body {
+    background-image: url("../media/images/banner-bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.47777777);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

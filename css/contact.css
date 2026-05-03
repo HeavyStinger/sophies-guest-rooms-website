@@ -297,7 +297,7 @@
       text-align: center;
     }
 
-    .microcopy > a {
+    a.privacy-policy {
       width: fit-content !important;
       background: none;
       padding: 0 !important;

@@ -158,7 +158,7 @@ nav > .hamburger-wrapper {
     nav > .links > li > a {
         width: fit-content;
         padding: 7px 14px;
-        font-size: 1.277777777rem;
+        font-size: 1.22rem;
         border: none;
         border-radius: 10px;
     }
@@ -187,6 +187,7 @@ nav > .hamburger-wrapper {
 .banner > .title {
     color: var(--text-color-heading);
     font-family: var(--secondary-font);
+    font-size: 2.2rem;
     line-height: 1.1;
 }
 
@@ -343,7 +344,7 @@ footer > .designer {
     width: 100%;
     background-color: rgba(var(--accent-color2));
     margin-top: calc(var(--section-y-spacing) * 2);
-    padding: 10px;
+    padding: 14px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -366,8 +366,9 @@
     align-items: center;
 }
 
-.book-now>a {
+.book-now > a {
     padding: 14px 70px;
+    color: rgba(255, 255, 255, 0.7);
     animation: cta-blink 1.4s infinite;
 }
 
@@ -378,7 +379,7 @@
         background-color: rgb(var(--accent-color2), 0.2);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
-        color: rgb(var(--accent-color2));
+        color: white;
     }
 
     100% {}
